@@ -1,0 +1,42 @@
+{
+  "data":
+  {
+    "input_channels": 1,
+    "scaler": "noclip",
+    "cross_validation": false,
+    "cv_index": 0
+  },
+  "model":
+  {
+    "ch_in": 1,
+    "ch_out": 7,
+    "width": 16,
+    "kernel_size": 7,
+    "depth": 5,
+    "order": 4,
+    "stride": [2, 2, 2, 2],
+    "decoding": false,
+    "expanding": true,
+    "se_bias": true
+  },
+  "run":
+  {
+    "batch_size_train": 64,
+    "batch_size_eval": 64,
+    "save_outputs": true,
+    "num_epochs": 50,
+    "learning_rate": 1e-2,
+    "weight_decay": 1e-10,
+    "class_weight": [1, 1, 1, 1, 1, 1, 1],
+    "feature_weight": [16, 8, 4, 2, 1],
+    "spatially_label_smoothing": false,
+    "combine_categories": ["tachy"],
+    "topology_loss": true,
+    "pretrain": false
+  },
+  "post":
+  {
+    "operation": "CO",
+    "kernel_size": [9, 9]
+  }
+}
