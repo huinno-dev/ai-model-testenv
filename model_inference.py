@@ -5,7 +5,6 @@ import json
 import boto3
 import pickle
 import warnings
-
 warnings.simplefilter(action='ignore', category=FutureWarning)
 from matplotlib import pyplot as plt
 from scipy import signal
